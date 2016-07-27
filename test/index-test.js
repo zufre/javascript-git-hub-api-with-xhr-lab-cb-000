@@ -1,17 +1,4 @@
-const expect = require('expect')
-const sinon = require('sinon')
-
-const fs = require('fs')
-const jsdom = require('mocha-jsdom')
-const path = require('path')
-
 describe('index', () => {
-
-  jsdom({
-    src: fs.readFileSync(path.resolve(__dirname, '..', 'index.js'), 'utf-8'),
-    html: fs.readFileSync(path.resolve(__dirname, '..', 'index.html'), 'utf-8')
-  })
-
   describe('page', () => {
     it('has a form', () => {
       var form = document.getElementsByTagName("form")[0]
