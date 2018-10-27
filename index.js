@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function getRepositories() {
   var username = document.getElementById("username").value;
   const req = new XMLHttpRequest();
@@ -86,3 +87,29 @@ function displayBranches() {
     "</ul>";
   document.getElementById("details").innerHTML = branchesList;
 }
+=======
+
+const getRepositories = ()  => {
+  var username = document.getElementById("username").value;
+  const req = new XMLHttpRequest();
+  req.addEventListener("load", showRepositories);
+  req.open("GET", `https://api.github.com/users/${username}/repos`);
+  req.send();
+}
+
+function showRepositories(event,data) {
+  var repos = JSON.parse(this.responseText);
+  const repoList =
+       "<ul>"
+    + repos.map(r => {
+      return
+      (
+        `<li>
+        <h2>${r.name}</h2>
+      
+        </li>`
+      )}).join("")
+  + "</ul>";
+  document.getElementById("repositories").innerHTML = repoList;
+}
+>>>>>>> 50a910d15f8fff75a528061b33cfdbac74accd93
