@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 function getRepositories() {
   var username = document.getElementById("username").value;
   const req = new XMLHttpRequest();
@@ -87,7 +87,6 @@ function displayBranches() {
     "</ul>";
   document.getElementById("details").innerHTML = branchesList;
 }
-=======
 
 const getRepositories = ()  => {
   var username = document.getElementById("username").value;
