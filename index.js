@@ -9,7 +9,7 @@ function getRepositories() {
 }
 
 function displayRepositories(event, data) {
-  
+
   const repos = JSON.parse(this.responseText);
   const repoList =
     "<ul>" +
@@ -40,7 +40,7 @@ function getCommits(el) {
   req.send();
 }
 function displayCommits() {
-  
+
   const commits = JSON.parse(this.responseText);
   const commitsList =
     "<ul>" +
@@ -69,7 +69,7 @@ function getBranches(el) {
   req.send();
 }
 
- 
+
 
 function displayBranches() {
   console.log(this.responseText);
@@ -106,7 +106,7 @@ function showRepositories(event,data) {
       (
         `<li>
         <h2>${r.name}</h2>
-      
+
         </li>`
       )}).join("")
   + "</ul>";
