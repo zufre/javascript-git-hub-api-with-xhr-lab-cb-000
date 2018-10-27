@@ -39,7 +39,7 @@ function getCommits(el) {
   );
   req.send();
 }
-function displayCommits() {
+const displayCommits = ()  => {
 
   const commits = JSON.parse(this.responseText);
   const commitsList =
