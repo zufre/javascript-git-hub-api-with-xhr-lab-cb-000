@@ -9,7 +9,7 @@ function getRepositories() {
 }
 
 function displayRepositories(event, data) {
-  console.log(this.responseText);
+  
   const repos = JSON.parse(this.responseText);
   const repoList =
     "<ul>" +
@@ -40,7 +40,7 @@ function getCommits(el) {
   req.send();
 }
 function displayCommits() {
-  console.log(this.responseText);
+  
   const commits = JSON.parse(this.responseText);
   const commitsList =
     "<ul>" +
@@ -112,4 +112,3 @@ function showRepositories(event,data) {
   + "</ul>";
   document.getElementById("repositories").innerHTML = repoList;
 }
->>>>>>> 50a910d15f8fff75a528061b33cfdbac74accd93
